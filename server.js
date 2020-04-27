@@ -9,9 +9,11 @@ var PORT = 3000;
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
-
-
+app.listen(process.env.PORT || PORT, function() {
+    console.log("Listening on port: " + PORT);
+})
 
 module.exports = {
-    app: app
+    app: app,
+    path: path
 }
