@@ -5,7 +5,7 @@ var friends = require("./app/data/friends.js");
 
 ///Here is where we start the express server.
 var app = express();
-var PORT = 3001;
+var PORT = process.env.PORT || 3001;
 
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
